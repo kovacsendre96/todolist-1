@@ -4,10 +4,10 @@ import Form from "./Form/Form";
 
 const TodoList = () => {
   return (
-    <>
+    <div className="todo-list">
       <Form />
       <List />
-    </>
+    </div>
   );
 };
 
