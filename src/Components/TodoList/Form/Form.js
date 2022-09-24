@@ -14,14 +14,14 @@ const Form = () => {
         </button>
       </form>
       <div className="filter-sort flex-center ">
-        <p className="margin-right-sm">Filter:</p>
-        <select className="margin-right-md">
+        <label className="margin-right-sm" for="filter">Filter:</label>
+        <select className="margin-right-md" id="filter">
           <option>Option1</option>
           <option>Option2</option>
           <option>Option3</option>
         </select>
-        <p className="margin-right-sm">Sort:</p>
-        <select className="margin-right-sm">
+        <label className="margin-right-sm" for="sort">Sort:</label>
+        <select className="margin-right-sm" id="sort">
           <option>Option1</option>
           <option>Option2</option>
           <option>Option3</option>

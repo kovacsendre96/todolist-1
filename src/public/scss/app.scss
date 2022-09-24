@@ -6,6 +6,8 @@ $btn-active-color: #c85000;
 // global variables: *sizes
 $size-sm: 8px;
 $size-md: 14px;
+$size-lg: 20px;
+$size-xlg: 30px;
 
 
 
@@ -23,19 +25,19 @@ $size-md: 14px;
 }
 
 .margin-top-lg {
- margin-top: 35px;
+ margin-top: $size-lg;
 }
 
 .margin-right-sm {
-  margin-right: 6px;
+  margin-right: $size-sm;
 }
 
 .margin-right-md {
-  margin-right: 20px;
+  margin-right: $size-lg;
 }
 
 .margin-right-lg {
-  margin-right: 30px;
+  margin-right: $size-xlg;
 }
 
 .my-fav-icons{
