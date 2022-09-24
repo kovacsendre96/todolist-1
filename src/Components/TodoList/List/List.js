@@ -1,11 +1,12 @@
 import ListItem from "./ListItem";
 
-const List = () => {
+const List = ({ todos }) => {
   return (
-    <>
-      <ListItem title={"Főzés"} date={"2022.10.15"} status={'success'} />
-      <ListItem title={"Mosogatás"} date={"2022.10.16"} status={'progress'} />
-    </>
+    <div className="wrapper">
+      {todos.map((todo, index) => (
+        <ListItem title={todo.title} date={todo.date} status={todo.status} key={index} />
+      ))}
+    </div>
   );
 };
 
