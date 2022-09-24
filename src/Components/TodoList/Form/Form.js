@@ -1,14 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortAmountDownAlt } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 const Form = ({
-  enteredTitle,
-  setEnteredTitle,
-  enteredDate,
-  setEnteredDate,
-  status,
-  addTodoHandler,
+  setTodos,
+  todos
 }) => {
+  const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredDate, setEnteredDate] = useState("");
+  const [status, setStatus] = useState("progress");
+
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
   };
@@ -20,10 +22,15 @@ const Form = ({
     title: enteredTitle,
     date: enteredDate,
     status: status,
+    key: uuidv4(),
   };
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    addTodoHandler(todoData);
+
+    setTodos((prevTodos) => {
+      return [todoData, ...prevTodos];
+    });
+
     setEnteredTitle("");
     setEnteredDate("");
     console.log(todoData);

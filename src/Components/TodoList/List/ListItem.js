@@ -7,7 +7,7 @@ const ListItem = ({ title, date, status }) => {
   const setClass = () => {
     if (status === "success") {
       return "todo-success";
-    }
+    } return ""
   };
 
   return (
