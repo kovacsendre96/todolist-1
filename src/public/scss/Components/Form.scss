@@ -1,0 +1,12 @@
+@import "./Button.scss";
+
+
+.control {
+  flex-direction: column;
+  background-color: $form-color;
+}
+
+.filter-sort {
+  width: 100%;
+  justify-content: flex-end;
+}

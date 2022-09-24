@@ -1,2 +1,54 @@
+// global variables: *colors
+$form-color: #E1F3FD;
+$item-color: #c3f5ec;
+$btn-color: #fa6400;
+$btn-focus-color:#fb8332;
+$btn-active-color: #c85000;
+// global variables: *sizes
+$size-sm: 8px;
+$size-md: 14px;
+
+
+
 @import "./Components/TodoList.scss";
+
+*{
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+// classes
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  width: 90%;
+  padding: $size-sm;
+  margin: $size-sm auto;
+  border-radius: $size-md;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 3px 10px 0px;
+}
+
+.margin-top-lg {
+ margin-top: 35px;
+}
+
+.margin-right-sm {
+  margin-right: 6px;
+}
+
+.margin-right-md {
+  margin-right: 20px;
+}
+
+.margin-right-lg {
+  margin-right: 30px;
+}
+
+.my-fav-icons{
+  color: #0DBC81;
+  font-size: $size-md;
+}
 
