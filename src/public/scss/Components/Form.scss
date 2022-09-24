@@ -1,0 +1,16 @@
+@import "./Button.scss";
+
+
+.control {
+  flex-direction: column;
+  background-color: $base-color;
+  width: 90%;
+  margin: $size-sm auto;
+  border-radius: $size-md;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 3px 10px 0px;
+}
+
+.filter-sort {
+  width: 100%;
+  justify-content: flex-end;
+}
