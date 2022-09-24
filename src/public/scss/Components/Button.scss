@@ -1,3 +1,4 @@
+//add button
 .add-btn {
   background-clip: padding-box;
   background-color: $btn-color;
@@ -26,4 +27,31 @@
   background-color: $btn-active-color;
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   transform: translateY(0);
+}
+
+//settings buttons:
+.settings-btn {
+  background-color: #ffffff;
+  border: 0;
+  border-radius: $size-sm;
+  padding: $size-sm $size-md;
+  text-decoration: none #d1d5db solid;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.settings-btn:hover {
+  background-color: rgb(249, 250, 251);
+}
+
+.settings-btn:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.settings-btn:focus-visible {
+  box-shadow: none;
 }
