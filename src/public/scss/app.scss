@@ -1,8 +1,10 @@
 // global variables: *colors
-$base-color: #E1F3FD;
+$form-color: #E1F3FD;
+$item-color: #c3f5ec;
 $btn-color: #fa6400;
 $btn-focus-color:#fb8332;
 $btn-active-color: #c85000;
+$myGreen-color:  #0DBC81;
 // global variables: *sizes
 $size-sm: 8px;
 $size-md: 14px;
@@ -24,24 +26,15 @@ $size-xlg: 30px;
   align-items: center;
 }
 
-.margin-top-lg {
- margin-top: $size-lg;
+.card {
+  width: 90%;
+  padding: $size-md;
+  margin: $size-sm auto;
+  border-radius: $size-md;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 3px 10px 0px;
 }
 
-.margin-right-sm {
-  margin-right: $size-sm;
-}
-
-.margin-right-md {
-  margin-right: $size-lg;
-}
-
-.margin-right-lg {
-  margin-right: $size-xlg;
-}
-
-.my-fav-icons{
-  color: #0DBC81;
-  font-size: $size-md;
-}
+  .margin-sm {
+   margin: $size-sm;
+ }
 
