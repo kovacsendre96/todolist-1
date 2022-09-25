@@ -1,0 +1,14 @@
+.control {
+  flex-direction: column;
+  background-color: $form-color;
+}
+
+.filter-sort {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.fav-icon-sort{
+  color: $myGreen-color;
+  font-size: $size-md;
+}

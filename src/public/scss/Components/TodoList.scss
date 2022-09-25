@@ -1,0 +1,17 @@
+@import "./Form.scss";
+@import "./Button.scss";
+@import "./ListItem.scss";
+
+
+.todo-list {
+  margin: auto;
+  height: 600px;
+  width: 500px;
+  border: 1px solid black;
+}
+
+//List.js wrapper:
+.wrapper {
+  overflow: auto;
+  height: 400px;
+}

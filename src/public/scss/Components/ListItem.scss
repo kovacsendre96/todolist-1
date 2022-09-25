@@ -1,0 +1,24 @@
+.todo {
+  justify-content: space-between;
+  background-color: $item-color;
+}
+
+.todo-success {
+  text-decoration: line-through;
+}
+
+.date {
+  text-align: center;
+}
+
+.check-icon {
+  color: $myGreen-color;
+}
+
+.trash-icon {
+  color:#F85555;
+}
+
+.pencil-icon {
+  color:#478CE6;
+}
