@@ -1,10 +1,13 @@
 import ListItem from "./ListItem";
 
-const List = ({ todos }) => {
+
+
+const List = ({ todos, setTodos}) => {
+
   return (
     <div className="wrapper">
       {todos.map((todo) => (
-        <ListItem title={todo.title} date={todo.date} status={todo.status} key={todo.id} />
+        <ListItem title={todo.title} date={todo.date} status={todo.status} id={todo.id} key={todo.id} setTodos={setTodos}/>
       ))}
     </div>
   );
