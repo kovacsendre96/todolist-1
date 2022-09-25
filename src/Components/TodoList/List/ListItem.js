@@ -4,25 +4,19 @@ import { faPencil } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-const ListItem = ({ title, date, status, setTodos, id }) => {
+const ListItem = ({ title, date, status, setTodos, id, todos }) => {
   const setStatusHandler = () => {
-    setTodos((prevTodos) => {
-      const changedTodos = prevTodos.map((todo) => {
-        if (todo.id === id) {
-          if (todo.status === "progress") {
-            console.log("Endre");
-            todo.status = "success";
-            
-          } else if (todo.status === "success") {
-            todo.status = "progress";
-            
-          }
+    const changedTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        if (todo.status === "progress") {
+          todo.status = "success";
+        } else if (todo.status === "success") {
+          todo.status = "progress";
         }
-        return todo;
-      });
-      console.log(changedTodos);
-      return changedTodos;
+      }
+      return todo;
     });
+    setTodos(changedTodos);
   };
 
   const setClass = () => {
