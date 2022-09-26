@@ -2,27 +2,45 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
-const ListItem = ({ title, date, status }) => {
+const ListItem = ({ title, date, status, setTodos, id, todos }) => {
+  const setStatusHandler = () => {
+    const changedTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        if (todo.status === "progress") {
+          todo.status = "success";
+        } else if (todo.status === "success") {
+          todo.status = "progress";
+        }
+      }
+      return todo;
+    });
+    setTodos(changedTodos);
+  };
+
   const setClass = () => {
     if (status === "success") {
       return "todo-success";
-    } return ""
+    }
+    return "";
   };
 
   return (
     <div
       className="flex-center card todo"
-      style={{ backgroundColor: status === "success" ? "lightgrey" : "" }}
+      style={{
+        backgroundColor: status === "success" ? "lightgrey" : "",
+      }}
     >
       <div className={`${setClass()}`}>{title}</div>
       <div>
         <div className="flex-center settings">
-          <button className="settings-btn">
-            <FontAwesomeIcon icon={faCheck} className="check-icon"/>
+          <button className="settings-btn" onClick={setStatusHandler}>
+            <FontAwesomeIcon icon={faCheck} className="check-icon" />
           </button>
           <button className="margin-sm settings-btn">
-            <FontAwesomeIcon icon={faPencil} className="pencil-icon"/>
+            <FontAwesomeIcon icon={faPencil} className="pencil-icon" />
           </button>
           <button className="settings-btn">
             <FontAwesomeIcon icon={faTrash} className="trash-icon" />
