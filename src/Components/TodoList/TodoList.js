@@ -6,6 +6,7 @@ import { DUMMY_TODOS } from "../../todoArray";
 
 const TodoList = () => {
   const [todos, setTodos] = useState(DUMMY_TODOS);
+ 
 
   return (
     <div className="todo-list">
@@ -13,7 +14,7 @@ const TodoList = () => {
         todos={todos}
         setTodos={setTodos}
         />
-      <List todos={todos} />
+      <List todos={todos} setTodos={setTodos}/>
     </div>
   );
 };
