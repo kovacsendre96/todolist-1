@@ -2,7 +2,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import FilterAndSort from "./FilterAndSort";
 
-const Form = ({ setTodos, todos }) => {
+const Form = ({ setTodos, todos, copyTodos }) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
 
@@ -53,7 +53,7 @@ const Form = ({ setTodos, todos }) => {
           Add
         </button>
       </form>
-      <FilterAndSort todos={todos} setTodos={setTodos}/>
+      <FilterAndSort todos={todos} setTodos={setTodos} copyTodos={copyTodos}/>
     </div>
   );
 };
